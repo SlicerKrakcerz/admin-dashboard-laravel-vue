@@ -7,13 +7,13 @@
         
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Product List</h3>
+                <h3 class="card-title">Daftar Produk</h3>
 
                 <div class="card-tools">
                   
                   <button type="button" class="btn btn-sm btn-primary" @click="newModal">
                       <i class="fa fa-plus-square"></i>
-                      Add New
+                      Tambah Produk
                   </button>
                 </div>
               </div>
@@ -23,21 +23,22 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Name</th>
-                      <th>Description</th>
-                      <th>Category</th>
-                      <th>Price</th>
-                      <th>Action</th>
+                      <th>Nama</th>
+                      <th>Kategori</th>
+                      <th>Nilai</th>
+                      <th>Tanggal</th>
+                      <th>Deskripsi</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                      <tr v-for="product in products.data" :key="product.id">
-
                       <td>{{product.id}}</td>
                       <td>{{product.name}}</td>
-                      <td>{{product.description | truncate(30, '...')}}</td>
                       <td>{{product.category.name}}</td>
-                      <td>{{product.price}}</td>
+                      <td>{{product.price > 9999 ? '9999+' : product.price}}</td>
+                      <td>{{product.updated_at}}</td>
+                      <td>{{ product.description.length > 30 ? product.description.substring(0, 30) + '...' : product.description }}</td>
                       <!-- <td><img v-bind:src="'/' + product.photo" width="100" alt="product"></td> -->
                       <td>
                         

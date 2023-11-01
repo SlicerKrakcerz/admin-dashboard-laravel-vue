@@ -13,7 +13,7 @@
                   
                   <button type="button" class="btn btn-sm btn-primary" @click="newModal">
                       <i class="fa fa-plus-square"></i>
-                      Add New
+                      Tambah Tag
                   </button>
                 </div>
               </div>
@@ -23,9 +23,9 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Name</th>
-                      <th>Created</th>
-                      <th>Action</th>
+                      <th>Nama</th>
+                      <th>Tanggal</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -33,7 +33,7 @@
 
                       <td>{{tag.id}}</td>
                       <td class="text-capitalize">{{tag.name}}</td>
-                      <td>{{tag.created_at}}</td>
+                      <td>{{tag.updated_at}}</td>
                       <td>
 
                         <a href="#" @click="editModal(tag)">

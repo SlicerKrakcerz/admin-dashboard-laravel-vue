@@ -4,7 +4,7 @@
         <router-link to="/dashboard" class="nav-link">
           <i class="nav-icon fas fa-tachometer-alt blue"></i>
           <p>
-            Dashboard
+            Dasbor
           </p>
         </router-link>
       </li>
@@ -13,7 +13,7 @@
         <router-link to="/products" class="nav-link">
           <i class="nav-icon fas fa-list orange"></i>
           <p>
-            Product
+            Produk
           </p>
         </router-link>
       </li>

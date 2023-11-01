@@ -25,6 +25,12 @@ class UserController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
+    public function getUserCount()
+    {
+        $count = User::count();
+        return response()->json(['count' => $count]);
+    }
+    
     public function index()
     {
         if (!Gate::allows('isAdmin')) {

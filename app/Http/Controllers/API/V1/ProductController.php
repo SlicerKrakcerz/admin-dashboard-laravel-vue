@@ -41,6 +41,11 @@ class ProductController extends BaseController
      * @param  App\Http\Requests\Products\ProductRequest  $request
      * @return \Illuminate\Http\Response
      */
+    public function getProductCount()
+    {
+        $count = Product::count();
+        return response()->json(['count' => $count]);
+    }
     public function store(ProductRequest $request)
     {
         $product = $this->product->create([

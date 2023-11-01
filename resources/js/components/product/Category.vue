@@ -13,7 +13,7 @@
                   
                   <button type="button" class="btn btn-sm btn-primary" @click="newModal">
                       <i class="fa fa-plus-square"></i>
-                      Add New
+                      Tambah Kategori
                   </button>
                 </div>
               </div>
@@ -23,10 +23,10 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Name</th>
-                      <th>Description</th>
-                      <th>Created</th>
-                      <th>Action</th>
+                      <th>Nama</th>
+                      <th>Tanggal</th>
+                      <th>Deskripsi</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -34,8 +34,8 @@
 
                       <td>{{category.id}}</td>
                       <td class="text-capitalize">{{category.name}}</td>
+                      <td>{{category.updated_at}}</td>
                       <td>{{category.description}}</td>
-                      <td>{{category.created_at}}</td>
                       <td>
 
                         <a href="#" @click="editModal(category)">

@@ -6,7 +6,7 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+window.Vue = require('vue').default;
 import moment from 'moment';
 
 import { Form, HasError, AlertError } from 'vform';

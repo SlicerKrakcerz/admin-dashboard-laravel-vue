@@ -26,6 +26,12 @@ class TagController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
+    public function getTagCount()
+    {
+        $count = Tag::count();
+        return response()->json(['count' => $count]);
+    }
+    
     public function index()
     {
         $tags = $this->tag->latest()->paginate(10);

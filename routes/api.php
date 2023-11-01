@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,8 +26,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// routes/api.php
 
 Route::namespace('App\\Http\\Controllers\\API\V1')->group(function () {
+    Route::get('/getChartData', 'ChartController@getChartData');
+    Route::get('/getProductCount', 'ProductController@getProductCount');
+    Route::get('/getUserCount', 'UserController@getUserCount');
+    Route::get('/getCategoryCount', 'CategoryController@getCategoryCount');
+    Route::get('/getTagCount', 'TagController@getTagCount');
     Route::get('profile', 'ProfileController@profile');
     Route::put('profile', 'ProfileController@updateProfile');
     Route::post('change-password', 'ProfileController@changePassword');
@@ -39,5 +46,6 @@ Route::namespace('App\\Http\\Controllers\\API\V1')->group(function () {
         'product' => 'ProductController',
         'category' => 'CategoryController',
         'tag' => 'TagController',
+        'chart' => 'ChartController',
     ]);
 });

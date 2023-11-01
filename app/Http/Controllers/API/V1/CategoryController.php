@@ -27,6 +27,11 @@ class CategoryController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
+    public function getCategoryCount()
+    {
+        $count = Category::count();
+        return response()->json(['count' => $count]);
+    }
     public function index()
     {
         $categories = $this->category->latest()->paginate(10);
